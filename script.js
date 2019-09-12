@@ -20,25 +20,33 @@ let newsfeed = [
     },
 ];
 
-//let username = prompt('Please enter your name');
-//let password = prompt('Please enter your password');
 
-//function logIn(username, password) {
-
-//}
 
 function validate() {
+   
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
-    
 
-    database.forEach((user) => {
-        if(username == user.username && password == user.password) {
-            alert('Successful');
-            window.location = 'welcome.html'; 
-            return false;
+    for (let user = 0; user < database.length; user++) {
+        if (database[user].username === username && database[user].password === password) {
+            value = 1;
+            
+        } else {
+            value = -1;
         } 
-    })
-   
+    }
+ console.log(value)
+loginMessage(value); // Callback 
+} 
 
+function loginMessage() {
+    if (value > 0 ) {
+        alert('Login successful');
+    } else {
+        alert('Login NOT successful');
+    }
 }
+
+
+
+
