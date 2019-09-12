@@ -1,6 +1,6 @@
 let database = [
     {
-        username: 'Sofi',
+        username: 'Sofie',
         password: 'open'
     },
     {
@@ -23,20 +23,17 @@ let newsfeed = [
 
 
 function validate() {
-   
+    
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
 
     for (let user = 0; user < database.length; user++) {
         if (database[user].username === username && database[user].password === password) {
             value = 1;
-            
-        } else {
-            value = -1;
         } 
     }
- console.log(value)
-loginMessage(value); // Callback 
+    console.log(value)
+    loginMessage(value); // Callback 
 } 
 
 function loginMessage() {
