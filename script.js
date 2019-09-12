@@ -32,6 +32,7 @@ function validate() {
             value = 1;
         } 
     })
+    
     console.log(value)
     loginMessage(value); // Callback 
 } 
@@ -39,9 +40,7 @@ function validate() {
 function loginMessage() {
     if (value > 0 ) {
         alert('Login successful');
-    } else {
-        alert('Login NOT successful');
-    }
+    } 
 }
 
 
