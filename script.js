@@ -40,9 +40,20 @@ function validate() {
 function loginMessage() {
     if (value > 0 ) {
         alert('Login successful');
+       // window.open('./newsfeed.html');
+       display();
     } 
+
 }
 
+
+function display() {
+    //let myWindow = window.open('newsfeed.html')
+    newsfeed.forEach((content) => {
+        document.write(content.username + '<br>');
+        document.write(content.timeline + '<br>');
+    });
+}
 
 
 
